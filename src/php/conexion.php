@@ -1,0 +1,30 @@
+<?php
+
+    class conexion {
+        private $host;
+        private $bd;
+        private $user;
+        private $password;
+        private $puerto;
+        private $conexionBD;
+    
+    function __construct($host, $bd, $user, $password, $puerto){ 
+        $this->host= $host;
+        $this->bd= $bd;
+        $this->user= $user;
+        $this->password= $password;
+        $this->puerto= $puerto;
+        $this->conexionBD= null;
+    }
+    public function conectar(){
+        $this->conexionBD= pg_connect("host=$this->host port=$this->puerto dbname=$this->bd user=$this->user password=$this->password");
+        return $this->conexionBD;
+    }
+    public function desconectar(){
+        pg_close($this->conexionBD);
+    }
+    public function ejecutar($sql){
+        return pg_query($this->conexionBD,$sql);
+    }
+}
+?>

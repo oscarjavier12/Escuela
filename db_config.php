@@ -1,10 +1,10 @@
 <?php
 // config.php - Configuración de conexión a la base de datos
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'universidad');
-define('DB_USER', 'postgres');
-define('DB_PASS', 'tu_password');
+define('DB_HOST', 'escuela.c5w04k0gqqf2.us-east-2.rds.amazonaws.com');
+define('DB_NAME', 'Escuela');
+define('DB_USER', 'Administrador');
+define('DB_PASS', 'codigo26');
 
 class Database {
     private $conn;

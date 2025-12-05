@@ -1,0 +1,115 @@
+<?php
+require_once 'config.php';
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Universitario - CRUD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .menu-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Sistema de Gestión Universitaria</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            Seleccione el módulo que desea gestionar
+        </p>
+        
+        <div class="menu">
+            <div class="menu-item">
+                <div class="icon">👨‍🏫</div>
+                <a href="docentes.php">Docentes</a>
+            </div>
+            
+            <div class="menu-item">
+                <div class="icon">👨‍🎓</div>
+                <a href="alumnos.php">Alumnos</a>
+            </div>
+            
+            <div class="menu-item">
+                <div class="icon">📚</div>
+                <a href="materias.php">Materias</a>
+            </div>
+            
+            <div class="menu-item">
+                <div class="icon">🎯</div>
+                <a href="carreras.php">Carreras</a>
+            </div>
+            
+            <div class="menu-item">
+                <div class="icon">📝</div>
+                <a href="cursos.php">Cursos</a>
+            </div>
+            
+            <div class="menu-item">
+                <div class="icon">📊</div>
+                <a href="calificaciones.php">Calificaciones</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

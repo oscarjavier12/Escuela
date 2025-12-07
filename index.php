@@ -13,7 +13,7 @@ require_once './src/php/config.php';
 <body>
     <div class="container">
         <h1>🎓 Sistema de Gestión Universitaria</h1>
-        <p style="text-align: center; color: #666; margin-bottom: 30px;">
+        <p >
             Seleccione el módulo que desea gestionar
         </p>
         

@@ -105,9 +105,16 @@ while ($row = pg_fetch_assoc($resultadoCu)) {
                 </div>
                 
                 <div class="form-group">
-                    <label>Tipo de Evaluación (ej: Parcial 1, Final, Tarea, etc.):</label>
-                    <input type="text" name="tipo_evaluacion" required value="<?php echo $editando ? $editando['tipo_evaluacion'] : ''; ?>">
-                </div>
+                    <label>Tipo de Evaluación :</label>
+                    <select name="tipo_evaluacion" required >
+                        <option value="">Seleccione un tipo</option>
+                        <option value="Parcial 1" <?php echo ($editando && $editando['tipo_evaluacion'] == 'Parcial 1') ? 'selected' : ''; ?>>Parcial 1</option>
+                        <option value="Parcial 2" <?php echo ($editando && $editando['tipo_evaluacion'] == 'Parcial 2') ? 'selected' : ''; ?>>Parcial 2</option>
+                        <option value="Parcial 1" <?php echo ($editando && $editando['tipo_evaluacion'] == 'Parcial 3') ? 'selected' : ''; ?>>Parcial 3</option>
+                        <option value="Parcial 2" <?php echo ($editando && $editando['tipo_evaluacion'] == 'Parcial 4') ? 'selected' : ''; ?>>Parcial 4</option>
+                        <option value="Examen Final" <?php echo ($editando && $editando['tipo_evaluacion'] == 'Examen Final') ? 'selected' : ''; ?>>Examen Final</option>
+                            </select>
+                    </div>
                 
                 <div class="form-group">
                     <label>Calificación (0-100):</label>

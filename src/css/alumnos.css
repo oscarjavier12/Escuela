@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #9CC6DB;
     min-height: 100vh;
     padding: 20px;
 }
@@ -21,14 +21,20 @@ body {
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 10px;
+    color: #6EC207;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #df802d;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .btn-volver {
     display: inline-block;
     padding: 10px 20px;
-    background: #6c757d;
+    background: #91ADC8;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -81,7 +87,7 @@ select {
 }
 
 .btn-primary:hover {
-    background: #5568d3;
+    background: #8CA9FF;
 }
 
 .btn-success {
@@ -95,8 +101,8 @@ select {
 }
 
 .btn-warning {
-    background: #ffc107;
-    color: #333;
+    background: #FFBC4C;
+    color: #ffffff;
 }
 
 table {
@@ -113,7 +119,7 @@ td {
 }
 
 th {
-    background: #667eea;
+    background: #239BA7;
     color: white;
 }
 

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 break;
                 
             case 'editar':
-                $consultas->editarCalificacion()($_POST['id_calificacion'], $_POST['num_control'], $_POST['id_curso'], $_POST['tipo_evaluacion'], $_POST['calificacion']);
+                $consultas->editarCalificacion($_POST['id_calificacion'], $_POST['num_control'], $_POST['id_curso'], $_POST['tipo_evaluacion'], $_POST['calificacion']);
                 header("Location: calificaciones.php");
                 exit();
                 break;
